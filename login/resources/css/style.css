@@ -1,0 +1,322 @@
+@font-face {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/FuturaPT-Book.woff");
+}
+
+@font-face {
+  font-family: "CirceExtraBold";
+  font-display: swap;
+  src: url("../fonts/CirceExtraBold.woff") format("woff"),
+    url("../fonts/CirceExtraBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: extra-bold;
+}
+
+@font-face {
+  font-family: "CirceBold";
+  font-display: swap;
+  src: url("../fonts/CirceBold.woff") format("woff"),
+    url("../fonts/CirceBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: bold;
+}
+
+.login-pf {
+  background: none;
+}
+
+.login-pf body {
+  background-color: #fff;
+  height: 100%;
+  background: none;
+}
+
+.login-pf-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  margin-right: -50%;
+  padding-top: 0;
+  transform: translate(-50%, -50%);
+}
+
+.login-pf-page .login-pf-page-header {
+  margin-bottom: 0;
+}
+
+.card-pf {
+  box-shadow: none;
+  border-radius: 3px;
+  background-color: #f4f6f9;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.logo {
+  width: 100px;
+  height: 87px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-image: url(../img/kwallet_logo.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#kc-page-title {
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #282828;
+  font-weight: 700;
+  font-family: "CirceExtraBold", sans-serif;
+}
+
+#kc-page-subtitle {
+  margin-top: 0;
+  text-align: center;
+  color: #282828;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "FuturaPT", sans-serif;
+}
+
+#kc-header-wrapper {
+  padding: 0 0 25px 0;
+}
+
+#kc-form-wrapper .form-group {
+  margin: 0;
+}
+
+#kc-form-wrapper .form-group.login-pf-settings {
+  margin: 25px 0;
+}
+
+.pf-c-form-control:not(textarea) {
+  position: relative;
+  border: 0;
+  border-bottom: 1px solid #c1c1c1;
+  background-color: transparent;
+  padding: 5px 0;
+  margin-bottom: 25px;
+  color: #282828;
+  font-size: 16px;
+  font-family: "FuturaPT", sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+  outline: none;
+}
+
+#password {
+  margin-bottom: 0;
+}
+
+.pf-c-form-control:hover,
+.pf-c-form-control:focus {
+  border-bottom-color: #06cc76;
+  border-width: 1px;
+}
+
+.pf-c-form-control[aria-invalid="true"] {
+  background: transparent;
+  border-width: 1px;
+}
+
+/* .checkbox {
+  color: #858585;
+  font-size: 16px;
+  font-family: "FuturaPT", sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+} */
+
+.checkbox label {
+  display: flex;
+  align-items: center;
+  color: #858585;
+  font-size: 16px;
+  font-family: "FuturaPT", sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 0;
+  margin: 0 7px 0 0;
+  background: transparent;
+  border-width: 1px;
+  border-radius: 2px;
+  background-color: #f4f6f9;
+  background-position: center center;
+  border-color: #c1c1c1;
+  border-style: solid;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+  background-color: #06cc76;
+  border-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox #rememberMe {
+  visibility: hidden;
+}
+
+.pf-c-button.pf-m-block {
+  width: 180px;
+  height: 45px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 600;
+  border-radius: 3px;
+  background-color: #06cc76;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+  font-family: "CirceBold", sans-serif;
+}
+
+.pf-c-button.pf-m-block:hover {
+  background-color: #282828;
+}
+
+.form-group.login-pf-settings a {
+  color: #06cc76;
+  font-size: 16px;
+  font-family: "FuturaPT", sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+input::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+input::-moz-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+input:-moz-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+input:-ms-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+input:focus::-moz-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+input:focus:-moz-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+input:focus:-ms-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+input.focus-visible {
+  border-color: transparent;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@media (max-width: 768px) {
+  #kc-header-wrapper {
+    padding: 0 0 25px 0;
+  }
+
+  .login-pf-page {
+    max-width: 100%;
+  }
+  .login-pf-page .card-pf {
+    margin: 0 15px;
+  }
+}
